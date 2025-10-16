@@ -68,6 +68,12 @@ h2{
     font-size: 40px;
 }
 
+/* Rimuovi contorno colorato dagli h2 nelle card progetto */
+.project h2 {
+    text-shadow: none;
+    color: #000;
+}
+
 .project img {
     max-width: 100%;
 }
