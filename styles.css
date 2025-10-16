@@ -1,0 +1,342 @@
+/* Stili globali */
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita lo scroll orizzontale */
+}
+header {
+    display: flex;
+    align-items: center;
+    background-color: #247c6f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    text-shadow:
+        -1px -1px 0 #000, /* Contorno in alto a sinistra */
+        1px -1px 0 #000, /* Contorno in alto a destra */
+        -1px 1px 0 #000, /* Contorno in basso a sinistra */
+        1px 1px 0 #000;
+    justify-content: center;
+}
+
+#my-photo {
+    width: 200px;         /* Imposta larghezza fissa */
+    height: 200px;        /* Imposta altezza fissa uguale alla larghezza */
+    object-fit: cover;    /* Ritaglia l’immagine per riempire il cerchio */
+    border-radius: 10%;
+    margin-right: 20px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.project {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px; 
+    max-height: 420px ;     /* aumenta se vuoi più spazio */
+    width: 100%;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.project iframe {
+    width: 100%;
+    height: 250px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;      /* evita scroll interni */
+    display: block;
+}
+
+h2{
+    color: #000;
+    text-shadow:
+        -1px -1px 0 #247c6f, /* Contorno in alto a sinistra */
+        1px -1px 0 #247c6f, /* Contorno in alto a destra */
+        -1px 1px 0 #247c6f, /* Contorno in basso a sinistra */
+        1px 1px 0 #247c6f;
+    font-size: 40px;
+}
+
+.project img {
+    max-width: 100%;
+}
+
+
+/* Aggiungi stili personalizzati per il tuo pulsante */
+input[type="button"] {
+    background-color:#247c6f; /* Cambia il colore di sfondo del pulsante */
+    color: #fff; /* Cambia il colore del testo del pulsante */
+    border: none;
+    padding: 10px 20px; /* Aggiungi spazio intorno al testo del pulsante */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background-color: #0044ff; /* Cambia il colore di sfondo al passaggio del mouse */
+}
+
+#visit-button {
+    filter: blur(0);
+}
+
+#visit-button:active {
+    filter: blur(5px); /* Cambia la sfocatura quando il pulsante è cliccato */
+}
+
+/* Stili per la sezione "Riguardo a Me" */
+#about-me {
+    max-width: 600px;
+    display: block; /* assicura il centramento */
+}
+
+#about-me h2 {
+    color: white;
+    font-size: 25px;
+    text-shadow:
+        -1px -1px 0 #000, /* Contorno in alto a sinistra */
+        1px -1px 0 #000, /* Contorno in alto a destra */
+        -1px 1px 0 #000, /* Contorno in basso a sinistra */
+        1px 1px 0 #000;
+}
+
+#about-me p {
+    color: white;
+    font-size: 20px;
+}
+
+/* Stili per il bottone di download */
+#download-button {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#download-button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#download-button:hover {
+    background-color: #0044ff;
+}
+
+
+/* Stili per il footer */
+footer {
+    background-color: #247c6f;
+    color: #fff;
+    padding: 10px;
+    text-shadow:
+        -1px -1px 0 #000, /* Contorno in alto a sinistra */
+        1px -1px 0 #000, /* Contorno in alto a destra */
+        -1px 1px 0 #000, /* Contorno in basso a sinistra */
+        1px 1px 0 #000;
+}
+.footer .grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer .col {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+.footer .col:nth-child(1) {
+    text-align: center;
+}
+
+.footer .col:nth-child(2) {
+    text-align: center;
+}
+.col img{height: 50px;width: 50px;}
+.col p{color: rgb(255, 255, 255);font-weight: 500; font-size: 20px;}
+.col h3{color: white;font-size: 25px;}
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.social_1,.social_2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Media queries per dispositivi mobili */
+@media (max-width: 768px) {
+    /* Header responsive */
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    #my-photo {
+        width: 150px;
+        height: 150px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .intro h1 {
+        font-size: 24px;
+    }
+
+    /* Footer responsive */
+    .footer {
+        padding: 20px 15px;
+    }
+
+    .footer .grid {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .footer .col {
+        flex: 1 1 100%;
+        text-align: left;
+        padding: 0 !important;
+        max-width: 300px;
+        width: 100%;
+    }
+
+    /* Riordino elementi su mobile: contatti e social al centro */
+    .col-about {
+        order: 3;
+    }
+
+    .col-contacts {
+        order: 1;
+    }
+
+    .col-social {
+        order: 2;
+    }
+
+    /* Social icons centrati su mobile */
+    .social {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .social_1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .col img {
+        height: 45px;
+        width: 45px;
+    }
+
+    .col p {
+        font-size: 16px;
+        margin: 5px 0;
+        text-align: left;
+    }
+
+    .col h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .col-contacts, .col-social, .col-about {
+        display: block;
+    }
+
+    /* About me section su mobile */
+    #about-me {
+        max-width: 100%;
+        padding: 0 10px;
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about-me h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    #about-me p {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    #download-button {
+        padding: 12px 20px;
+        font-size: 14px;
+        margin-top: 15px;
+        display: inline-block;
+    }
+
+    /* Projects responsive */
+    .project {
+        margin: 15px;
+        padding: 15px;
+        max-height: none;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ottimizzazioni per schermi molto piccoli */
+    .intro h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .footer {
+        padding: 15px 10px;
+    }
+
+    .col h3 {
+        font-size: 20px;
+    }
+
+    .col p {
+        font-size: 14px;
+    }
+
+    #about-me p {
+        font-size: 14px;
+    }
+
+    #download-button {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+}
