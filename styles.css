@@ -176,6 +176,10 @@ footer {
 .col img{height: 50px;width: 50px;}
 .col p{color: rgb(255, 255, 255);font-weight: 500; font-size: 20px;}
 .col h3{color: white;font-size: 25px;}
+.footer a[href^="tel"] {
+    color: #000 !important; /* forza nero per i link telefonici */
+    text-decoration: none !important;
+}
 .social{
     display: flex;
     justify-content: center;
